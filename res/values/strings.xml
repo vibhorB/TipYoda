@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TipYoda</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="amount">Bill Amount</string>
+    <string name="dollar">$</string>
+    <string name="tip">Tip %</string>
+    <string name="tipAmt">Tip Amount</string>
+    <string name="split">Split among</string>
+    <string name="round">Round Off</string>
+    <string name="bill">Total Bill</string>
+    <string name="perperson">Per Person</string>
+    <string name="calc">Calculate</string>
+    <string name="settings">Tip Calculator Settings</string>
+    <string name="defTip">Default Tip</string>
+    <string name="defTipTitle">Set the default tip</string>
+    <string name="defRound">Round Off</string>
+    <string name="defRoundTitle">Select round off preference</string>
+    <string name="defSplit">Split bill</string>
+    <string name="defSplitTitle">Split bill among</string>
+    <string name="save">Save expenses?</string>
+    <string name="saveExp">Save Bill</string>
+    <string name="about">About App</string>
+    <string name="refresh">Refresh</string>
+    <string name="archive">Archive</string>
+    <string name="okButton"> OK </string>
+<!--     <string name=""></string>
+        
+        <string name=""></string>
+            <string name=""></string>
+            <string name=""></string>
+                <string name=""></string>--> 
+            
+</resources>

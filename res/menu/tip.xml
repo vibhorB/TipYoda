@@ -1,0 +1,36 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+    
+    <item
+        android:id="@+id/refresh"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/saveExp"
+        android:icon="@drawable/ic_menu_refresh"/>
+    
+    <item
+        android:id="@+id/save"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/saveExp"
+        android:icon="@drawable/ic_menu_save"/>
+    
+    <item
+        android:id="@+id/archieve"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/archive"
+        android:icon="@drawable/ic_menu_archive"/>
+    
+      <item
+        android:id="@+id/about"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/about"/>
+
+</menu>

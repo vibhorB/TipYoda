@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="roundOffEntries">
+        <item name="Tip">Round off tip</item>
+        <item name="Total">Round off total</item>
+        <item name="None">Dont round off</item>
+    </string-array>
+    <string-array name="roundOffValues">
+        <item name="Tip">Tip</item>
+        <item name="Total">Total</item>
+        <item name="None">None</item>
+    </string-array>
+</resources>

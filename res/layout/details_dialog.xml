@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/food" >
+    
+    <TextView
+        android:id="@+id/tvDiaBill"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/SeaGreen"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+    
+    <TextView
+        android:id="@+id/tvDiaTipPercent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDiaBill"
+        android:textColor="@color/SeaGreen"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"/>
+    
+<TextView
+        android:id="@+id/tvDiaSplit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDiaTipPercent"
+        android:gravity="center"
+        android:textColor="@color/SeaGreen"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+<TextView
+        android:id="@+id/tvDiaTipAmt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDiaSplit"
+        android:gravity="center"
+        android:textColor="@color/SeaGreen"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+    <TextView
+        android:id="@+id/tvDiaBillAmt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDiaTipAmt"
+        android:gravity="center"
+        android:textColor="@color/SeaGreen"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+    <TextView
+        android:id="@+id/tvDiaPPAmt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDiaBillAmt"
+        android:gravity="center"
+        android:textColor="@color/SeaGreen"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <Button
+        android:id="@+id/dialogButtonOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDiaPPAmt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="102dp"
+        android:gravity="center|bottom"
+        android:text="@string/okButton" />
+        
+</RelativeLayout>
