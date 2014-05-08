@@ -167,33 +167,29 @@ public final class R {
         public static final int activity_vertical_margin=0x7f070001;
     }
     public static final class drawable {
-        public static final int delete=0x7f020000;
-        public static final int delete_icon=0x7f020001;
-        public static final int food=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int ic_menu_archive=0x7f020004;
-        public static final int ic_menu_delete=0x7f020005;
-        public static final int ic_menu_refresh=0x7f020006;
-        public static final int ic_menu_save=0x7f020007;
-        public static final int ic_menu_share=0x7f020008;
-        public static final int ic_tip=0x7f020009;
-        public static final int share=0x7f02000a;
+        public static final int ic_launcher=0x7f020000;
+        public static final int ic_launcher2=0x7f020001;
+        public static final int ic_menu_archive=0x7f020002;
+        public static final int ic_menu_delete=0x7f020003;
+        public static final int ic_menu_refresh=0x7f020004;
+        public static final int ic_menu_save=0x7f020005;
+        public static final int ic_menu_share=0x7f020006;
     }
     public static final class id {
         public static final int about=0x7f0b001f;
         public static final int action_settings=0x7f0b001b;
         public static final int archieve=0x7f0b001e;
         public static final int dialogButtonOK=0x7f0b0018;
-        public static final int etBill=0x7f0b0005;
+        public static final int etBill=0x7f0b000b;
         public static final int lvBills=0x7f0b0001;
         public static final int refresh=0x7f0b001c;
         public static final int save=0x7f0b001d;
-        public static final int sbPeople=0x7f0b0006;
-        public static final int sbtip=0x7f0b0004;
+        public static final int sbPeople=0x7f0b0007;
+        public static final int sbtip=0x7f0b000e;
         public static final int spRound=0x7f0b0009;
         public static final int tvAbout=0x7f0b0000;
-        public static final int tvAmount=0x7f0b0003;
-        public static final int tvBill=0x7f0b000b;
+        public static final int tvAmount=0x7f0b0005;
+        public static final int tvBill=0x7f0b0011;
         public static final int tvDate=0x7f0b0019;
         public static final int tvDiaBill=0x7f0b0012;
         public static final int tvDiaBillAmt=0x7f0b0016;
@@ -201,17 +197,17 @@ public final class R {
         public static final int tvDiaSplit=0x7f0b0014;
         public static final int tvDiaTipAmt=0x7f0b0015;
         public static final int tvDiaTipPercent=0x7f0b0013;
-        public static final int tvFinalBill=0x7f0b000e;
-        public static final int tvFinalPP=0x7f0b0011;
+        public static final int tvFinalBill=0x7f0b0004;
+        public static final int tvFinalPP=0x7f0b0002;
         public static final int tvFinalTip=0x7f0b000f;
-        public static final int tvPeople=0x7f0b000d;
-        public static final int tvPerPErson=0x7f0b0010;
+        public static final int tvPeople=0x7f0b000c;
+        public static final int tvPerPErson=0x7f0b0003;
         public static final int tvPerPersonList=0x7f0b001a;
-        public static final int tvPercent=0x7f0b000c;
-        public static final int tvPpl=0x7f0b0007;
-        public static final int tvRound=0x7f0b0008;
-        public static final int tvTip=0x7f0b0002;
-        public static final int tvTipAmt=0x7f0b000a;
+        public static final int tvPercent=0x7f0b000d;
+        public static final int tvPpl=0x7f0b0008;
+        public static final int tvRound=0x7f0b0006;
+        public static final int tvTip=0x7f0b000a;
+        public static final int tvTipAmt=0x7f0b0010;
     }
     public static final class layout {
         public static final int about=0x7f030000;

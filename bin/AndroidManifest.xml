@@ -11,11 +11,11 @@
     <application
         android:allowBackup="true"
         android:debuggable="true"
-        android:icon="@drawable/ic_tip"
+        android:icon="@drawable/ic_launcher2"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.codepath.tipcalculator.TipActivity"
+            android:name="com.codepath.tipyoda.activities.TipActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,11 +24,11 @@
             </intent-filter>
         </activity>
          <activity
-            android:name="com.codepath.tipcalculator.UserSettingActivity"
-            android:label="@string/settings" >
+            android:name="com.codepath.tipyoda.activities.UserSettingActivityivity"
+            android:label="@string/action_settings" >
         </activity>
         <activity
-            android:name="com.codepath.tipcalculator.BillArchiveActivity"
+            android:name="com.codepath.tipyoda.activities.BillArchiveActivityveActivity"
             android:label="@string/archive" >
         </activity>
     </application>
