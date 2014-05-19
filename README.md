@@ -19,6 +19,12 @@ Version 1.0.1
 8. Inside archive view, single tap item to see compete details
 9. Inside archive view, long press to delete item
 
+**Screenshots**
+
+![Screenshot]()
+![Screenshot]()
+![Screenshot]()
+
 **Coming Soon**
 
 1. Store original receipt by taking pics from within the app
