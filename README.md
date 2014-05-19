@@ -1,8 +1,13 @@
 TipYoda
+========
+
+TipYoda - More than just a tip calculator
 
 Version 1.0.1
 
-What all this app can do :
+
+
+**Features**
 
 1. Calculate tip
 2. Split bills
@@ -14,12 +19,21 @@ What all this app can do :
 8. Inside archive view, single tap item to see compete details
 9. Inside archive view, long press to delete item
 
-
-Coming Soon -
+**Coming Soon**
 
 1. Store original receipt by taking pics from within the app
-2. Add restaurant name while saving
-3. Share expenses with friends.
+2. Share expenses with friends.
 
+**Acknowledgements**
 
-Enjoy !!!
+Open source library used :
+* [Croutons] (https://github.com/keyboardsurfer/Crouton)
+
+**Contributing**
+
+Please fork this repository and contribute back using
+[pull requests](https://github.com/vibhorB/TipYoda/pulls).
+
+Any contributions, large or small, major features, bug fixes, additional
+language translations, unit/integration tests are welcomed and appreciated
+but will be thoroughly reviewed and discussed.
