@@ -2,49 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" >
+    android:orientation="horizontal"
+    android:weightSum="3" >
 
-    <TextView
-        android:id="@+id/tvDate"
+     <TextView
+        android:id="@+id/tvName"
+        android:layout_weight="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="25sp"
-        android:textColor="@color/SeaGreen"
-        android:gravity="left"/>
-    
-    <!-- <TextView 
-        android:id="@+id/tvBillList"
+        android:textSize="15sp"
+		android:maxLines="1"
+        android:singleLine="true"
+        android:ellipsize="end"        
+        android:textColor="@color/SeaGreen"/>
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_weight="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:paddingLeft="20dp"
-        android:text="TextView"/>
-    
-    <TextView 
-        android:id="@+id/tvTipList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="TextView"/> -->
-    
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="15sp"
+        android:textColor="@color/SeaGreen"/>    
     <TextView 
         android:id="@+id/tvPerPersonList"
+        android:layout_weight="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="80dp"
-        android:textSize="25sp"
+        android:textSize="15sp"
         android:gravity="right"
         android:textColor="@color/SeaGreen"
         android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-   <!--  <ImageButton
-        android:id="@+id/btnRemove"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:layout_gravity="right"
-        android:src="@drawable/delete" /> -->
-
 </LinearLayout>

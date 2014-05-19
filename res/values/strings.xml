@@ -24,13 +24,20 @@
     <string name="saveExp">Save Bill</string>
     <string name="about">About App</string>
     <string name="refresh">Refresh</string>
-    <string name="archive">Archive</string>
+    <string name="archive">Bill History</string>
     <string name="okButton"> OK </string>
-<!--     <string name=""></string>
+    <string name="name">Name</string>
+    <string name="date">Date</string>
+    <string name="paid">Paid</string>
+    <!--
+         <string name=""></string>
         
         <string name=""></string>
             <string name=""></string>
             <string name=""></string>
-                <string name=""></string>--> 
-            
+                <string name=""></string>
+    -->
+
+    <string name="title_activity_bill_name">Add a name</string>
+
 </resources>

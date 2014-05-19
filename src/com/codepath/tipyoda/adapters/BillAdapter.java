@@ -25,7 +25,6 @@ public class BillAdapter extends ArrayAdapter<BillDetails>{
 	public BillAdapter(Context context, ArrayList<BillDetails> bills, TipDatabaseHandler dbHandler) {
 		super(context, R.layout.item_bill, bills);
 		this.dbHandler = dbHandler;
-		// TODO Auto-generated constructor stub
 	}
 	
 	 @Override
@@ -39,12 +38,8 @@ public class BillAdapter extends ArrayAdapter<BillDetails>{
 	       }
 	       // Lookup view for data population
 	       TextView tvDate = (TextView) convertView.findViewById(R.id.tvDate);
-//	       TextView tvBill = (TextView) convertView.findViewById(R.id.tvBillList);
-//	       TextView tvTip = (TextView) convertView.findViewById(R.id.tvTipList);
 	       TextView tvPp = (TextView) convertView.findViewById(R.id.tvPerPersonList);
-	       //ImageButton ibDel = (ImageButton) convertView.findViewById(R.id.btnRemove);
-	       // Populate the data into the template view using the data object
-	       
+	       TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
 	       if(bill == null){
 	    	   tvDate.setText("     Date   ");
 	    	   //tvBill.setText("       Bill");
@@ -52,10 +47,9 @@ public class BillAdapter extends ArrayAdapter<BillDetails>{
 	    	   tvPp.setText("   You Paid");
 	    	   //ibDel.setVisibility(View.GONE);
 	       }else{
+	           tvName.setText(bill.getBillName());
 	    	   tvDate.setText(bill.getDate());
-		       //tvBill.setText(""+bill.getBill());
-		       //tvTip.setText(""+bill.getTipAmount());
-		       tvPp.setText(""+bill.getAmtPerPerson());
+		       tvPp.setText("$"+bill.getAmtPerPerson());
 	       }
 	       // Return the completed view to render on screen
 	       return convertView;

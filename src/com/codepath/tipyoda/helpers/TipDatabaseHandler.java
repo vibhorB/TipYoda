@@ -3,21 +3,24 @@ package com.codepath.tipyoda.helpers;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.codepath.tipyoda.models.BillDetails;
-
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
+
+import com.codepath.tipyoda.models.BillDetails;
+
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class TipDatabaseHandler extends SQLiteOpenHelper {
 		
 	private Context ctx;
-	 private static final int DATABASE_VERSION = 1;
+	 private static final int DATABASE_VERSION = 2;
 	 
 	    // Database Name
 	    private static final String DATABASE_NAME = "tipYoda";
@@ -34,6 +37,7 @@ public class TipDatabaseHandler extends SQLiteOpenHelper {
 	    private static final String KEY_TIP_AMT = "tipAmount";
 	    private static final String KEY_BILL_AMT = "billAmount";
 	    private static final String KEY_PER_PERSON = "amtPerPerson";
+	    private static final String KEY_NAME = "billName";
 	    
 	public TipDatabaseHandler(Context context) {
 		
@@ -49,7 +53,7 @@ public class TipDatabaseHandler extends SQLiteOpenHelper {
 		// TODO Auto-generated method stub
 		String CREATE_BILL_TABLE = "CREATE TABLE " + TABLE_BILL + "(" + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + KEY_DATE + 
 				" TEXT,"+ KEY_BILL + " REAL," + KEY_TIP + " INTEGER," + KEY_PEOPLE + " INTEGER," + KEY_TIP_AMT 
-				+ " REAL,"+ KEY_BILL_AMT + " REAL," + KEY_PER_PERSON + " REAL" + ")";
+				+ " REAL,"+ KEY_BILL_AMT + " REAL," + KEY_PER_PERSON + " REAL," + KEY_NAME + " TEXT"+ ")";
 		
 		try{
 			db.execSQL(CREATE_BILL_TABLE);
@@ -84,10 +88,11 @@ public class TipDatabaseHandler extends SQLiteOpenHelper {
 	    values.put(KEY_TIP_AMT,bill.getTipAmount());
 	    values.put(KEY_BILL_AMT,bill.getBillAmount());
 	    values.put(KEY_PER_PERSON,bill.getAmtPerPerson());
+	    values.put(KEY_NAME, bill.getBillName());
 	    
 	    db.insert(TABLE_BILL, null, values);
 	    db.close();
-	    Toast.makeText(ctx, "Bill saved to archive",Toast.LENGTH_SHORT).show();
+	    Crouton.makeText((Activity)ctx, "Bill saved to archive",Style.INFO).show();
 	    
 	}
 	
@@ -122,6 +127,7 @@ public class TipDatabaseHandler extends SQLiteOpenHelper {
 	            bill.setTipAmount(cursor.getDouble(5));
 	            bill.setBillAmount(cursor.getDouble(6));
 	            bill.setAmtPerPerson(cursor.getDouble(7));
+	            bill.setBillName(cursor.getString(8));
 	            // Adding contact to list
 	            billList.add(bill);
 	        } while (cursor.moveToNext());

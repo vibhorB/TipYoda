@@ -39,17 +39,6 @@
           android:textAppearance="?android:attr/textAppearanceMedium"
           android:textColor="@color/SeaGreen" />
 
-      <TextView
-          android:id="@+id/tvRound"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_below="@+id/sbPeople"
-          android:layout_alignRight="@+id/tvPpl"
-          android:layout_marginBottom="30dp"
-          android:text="@string/round"
-          android:textAppearance="?android:attr/textAppearanceMedium"
-          android:textColor="@color/SeaGreen" />
-
       <Spinner
           android:id="@+id/spRound"
           android:layout_width="150dp"
@@ -136,17 +125,6 @@
           android:textColor="@color/SeaGreen" />
 
       <TextView
-          android:id="@+id/tvBill"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_alignRight="@+id/tvTipAmt"
-          android:layout_below="@+id/tvTipAmt"
-          android:layout_marginBottom="22dp"
-          android:text="@string/bill"
-          android:textAppearance="?android:attr/textAppearanceMedium"
-          android:textColor="@color/SeaGreen" />
-
-      <TextView
           android:id="@+id/tvFinalBill"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -163,7 +141,7 @@
           android:layout_height="wrap_content"
           android:layout_alignLeft="@+id/sbPeople"
           android:layout_below="@+id/spRound"
-          android:layout_marginBottom="22dp"
+          android:layout_marginBottom="15dp"
           android:text="@string/tipAmt"
           android:textAppearance="?android:attr/textAppearanceMedium"
           android:textColor="@color/SeaGreen" />
@@ -172,7 +150,6 @@
           android:id="@+id/tvPerPErson"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_alignRight="@+id/tvBill"
           android:layout_below="@+id/tvBill"
           android:text="@string/perperson"
           android:textAppearance="?android:attr/textAppearanceMedium"
@@ -186,5 +163,26 @@
           android:layout_alignLeft="@+id/tvTip"
           android:layout_marginBottom="15dp"
           android:max="100" />
+
+      <TextView
+          android:id="@+id/tvRound"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/tvPerPErson"
+          android:layout_below="@+id/sbPeople"
+          android:text="@string/round"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:textColor="@color/SeaGreen" />
+
+      <TextView
+          android:id="@+id/tvBill"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/tvTipAmt"
+          android:layout_below="@+id/tvTipAmt"
+          android:text="@string/bill"
+          android:layout_marginBottom="15dp"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:textColor="@color/SeaGreen" />
 
 </RelativeLayout>

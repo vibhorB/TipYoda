@@ -3,6 +3,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
     
+    <LinearLayout
+        android:id="@+id/llBill"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="3" >
+    
+        <TextView android:id="@+id/tvName"
+            android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textColor="@color/SeaGreen"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="25sp"
+        android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/date"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/SeaGreen"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            
+            <TextView
+        android:id="@+id/tvAmt"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/SeaGreen"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="25sp"
+        android:gravity="right"
+        android:text="@string/paid" />
+    
+        </LinearLayout>
+    
+    
+    <View
+        android:layout_below="@+id/llBill"
+        android:id="@+id/horzDivider"
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="@color/SeaGreen"
+/>
+
     <ListView
         android:id="@+id/lvBills"
         android:layout_width="match_parent"
@@ -10,9 +62,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/horzDivider"
         android:textColor="@color/SeaGreen" >
 
     </ListView>
+
+
 
 </RelativeLayout>

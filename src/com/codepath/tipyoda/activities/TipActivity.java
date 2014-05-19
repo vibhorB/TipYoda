@@ -4,20 +4,14 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.codepath.tipcalculator.R;
-import com.codepath.tipcalculator.R.id;
-import com.codepath.tipcalculator.R.layout;
-import com.codepath.tipcalculator.R.menu;
-import com.codepath.tipyoda.helpers.TipCalcConstants;
-import com.codepath.tipyoda.helpers.TipDatabaseHandler;
-import com.codepath.tipyoda.models.BillDetails;
-
-import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
@@ -30,10 +24,17 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.SeekBar;
-import android.widget.Toast;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.codepath.tipcalculator.R;
+import com.codepath.tipyoda.helpers.TipCalcConstants;
+import com.codepath.tipyoda.helpers.TipDatabaseHandler;
+import com.codepath.tipyoda.models.BillDetails;
+
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class TipActivity extends Activity implements OnItemSelectedListener{
 
@@ -259,15 +260,14 @@ public class TipActivity extends Activity implements OnItemSelectedListener{
 							+ "5. Clear all, reset from settings - click on reset icon"+ System.getProperty ("line.separator")
 							+ "6. Save your expenses - click the save icon"+ System.getProperty ("line.separator")
 							+ "7. Check history - click on Folder icon"+ System.getProperty ("line.separator")
-							+ "8. Single tap history item to view more details"+ System.getProperty ("line.separator")
+							+ "8. Single tap archive item to view more details"+ System.getProperty ("line.separator")
 							+ "9. Long press to delete history item"+ System.getProperty ("line.separator")
 							+ ""+ System.getProperty ("line.separator")
 							+ System.getProperty ("line.separator")
 							+ "Coming Soon :"+System.getProperty ("line.separator")
 							+ System.getProperty ("line.separator")
 							+ "1. Store original receipt"+ System.getProperty ("line.separator")
-							+ "2. Add restaurant name"+ System.getProperty ("line.separator")
-							+ "3. Share expenses with friends"+ System.getProperty ("line.separator")
+							+ "2. Share expenses with friends"+ System.getProperty ("line.separator")
 							+ System.getProperty ("line.separator")
 							+ "Enjoy !!!";
 		
@@ -284,19 +284,44 @@ public class TipActivity extends Activity implements OnItemSelectedListener{
 	}
 
 	private void saveToDB() {
-		if(billAmount == 0 && totalBill == 0){
-			Toast.makeText(this, "Nothing to add",Toast.LENGTH_SHORT).show();
-			return;
-		}
-		
-		Time now = new Time();
-		now.setToNow();
-		String time = now.format3339(true);
-		//Toast.makeText(this, "Time:"+ time,Toast.LENGTH_SHORT).show();
-		BillDetails bill = new BillDetails(time, billAmount, tipPercent, people, tipAmount, totalBill, perPerson);
-		tipDB.addBillEntry(bill);
-		//int records = tipDB.getBillsCount();
-		//Toast.makeText(this, "Records:"+ records,Toast.LENGTH_SHORT).show();
+	    if(billAmount == 0 && totalBill == 0){
+            Crouton.makeText(this, "Nothing to save", Style.ALERT).show();
+            //Toast.makeText(this, "Nothing to add",Toast.LENGTH_SHORT).show();
+            return;
+        }
+	    loadBillNameDialog();
+	}
+	
+	private void loadBillNameDialog(){
+	    final EditText input = new EditText(TipActivity.this);
+	    new AlertDialog.Builder(TipActivity.this)
+	        .setTitle("Set a name")
+	        //.setMessage("Hello")
+	        .setView(input)
+	        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+	             public void onClick(DialogInterface dialog, int whichButton) {
+	                 String ttl = input.getText().toString(); 
+	                 executeSave(ttl);
+	             }
+	        })
+	        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+	             public void onClick(DialogInterface dialog, int whichButton) {
+	                    // Do nothing.
+	             }
+	        }).show();
+	}
+	
+	private void executeSave(String billName){
+	    
+        //popup dialog for text input
+        Time now = new Time();
+        now.setToNow();
+        String time = now.format3339(true);
+        //Toast.makeText(this, "Time:"+ time,Toast.LENGTH_SHORT).show();
+        BillDetails bill = new BillDetails(time, billAmount, tipPercent, people, tipAmount, totalBill, perPerson, billName);
+        tipDB.addBillEntry(bill);
+        //int records = tipDB.getBillsCount();
+        //Toast.makeText(this, "Records:"+ records,Toast.LENGTH_SHORT).show();
 	}
 
 	private void clear() {
