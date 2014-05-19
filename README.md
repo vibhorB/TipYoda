@@ -21,9 +21,17 @@ Version 1.0.1
 
 **Screenshots**
 
-![Screenshot]()
-![Screenshot]()
-![Screenshot]()
+![Screenshot](https://raw.githubusercontent.com/vibhorB/TipYoda/master/screenshots/TipYoda.png)
+![Screenshot](https://raw.githubusercontent.com/vibhorB/TipYoda/master/screenshots/Calculate.png)
+![Screenshot](https://raw.githubusercontent.com/vibhorB/TipYoda/master/screenshots/Save%20Bill.png)
+![Screenshot](https://raw.githubusercontent.com/vibhorB/TipYoda/master/screenshots/Save.png)
+![Screenshot](https://raw.githubusercontent.com/vibhorB/TipYoda/master/screenshots/Archive.png)
+![Screenshot](https://raw.githubusercontent.com/vibhorB/TipYoda/master/screenshots/Detail.png)
+![Screenshot](https://raw.githubusercontent.com/vibhorB/TipYoda/master/screenshots/Settings.png)
+![Screenshot](https://raw.githubusercontent.com/vibhorB/TipYoda/master/screenshots/Setting-Tip.png)
+![Screenshot](https://raw.githubusercontent.com/vibhorB/TipYoda/master/screenshots/Setting-round.png)
+![Screenshot](https://raw.githubusercontent.com/vibhorB/TipYoda/master/screenshots/Setting-split.png)
+![Screenshot](https://raw.githubusercontent.com/vibhorB/TipYoda/master/screenshots/About.png)
 
 **Coming Soon**
 
